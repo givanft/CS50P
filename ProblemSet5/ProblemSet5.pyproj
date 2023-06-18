@@ -1,0 +1,58 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>cbc0253f-2a5e-4986-9dab-f040af814c3e</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>test_fuel\fuel.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ProblemSet5</Name>
+    <RootNamespace>ProblemSet5</RootNamespace>
+    <TestFramework>Pytest</TestFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ProblemSet5.py" />
+    <Compile Include="test_bank\bank.py" />
+    <Compile Include="test_bank\test_bank.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_fuel\fuel.py" />
+    <Compile Include="test_fuel\test_fuel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_plates\test_plates.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_plates\vanity_plates.py" />
+    <Compile Include="test_twttr\test_twttr.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_twttr\twttr.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="test_fuel\" />
+    <Folder Include="test_plates\" />
+    <Folder Include="test_bank\" />
+    <Folder Include="test_twttr\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
